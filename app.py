@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
   return 'Index page'
 
-@app.route('/hello')
-def hello():
-  return 'Hello world'
+@app.route('/book', methods=['GET', 'POST'])
+def book():
+  if method == GET:
+    return {"a": "b"} # JSON
+  elif method == POST:
+    pass
+    # create new book if not already exists

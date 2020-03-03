@@ -10,7 +10,7 @@ def index():
 @app.route('/book', methods=['GET', 'POST'])
 def book():
   if method == GET:
-    return {"a": "b"} # JSON
+    return jsonify({"a": "b"})
   elif method == POST:
     pass
     # create new book if not already exists
